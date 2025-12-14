@@ -1,94 +1,136 @@
-css
 body {
-   font-family:Arial, sens-serif;
-   background-color: beige;
+  font-family: Arial, sans-serif;
+  background-color: beige;
+  margin: 0;
 }
+
 .page{
-   width: 800px;
-   margin: 20px auto;
-   background: pink;
-   padding: 20px;
-   border: 2px solid #b5b5b5;
+  width: 800px;
+  margin: 20px auto;
+  background: pink;
+  padding: 20px;
+  border: 2px solid #b5b5b5;
 }
+
 .header {
-   background-color: aliceblue;
-   padding: 10px;
-   border: 2px solid #000;
-   text-align: right;
+  background-color: aliceblue;
+  padding: 10px;
+  border: 2px solid #000;
+  text-align: right;
 }
+
 .header h1 {
-   color:black;
-   margin: 0;
-
-
+  color: black;
+  margin: 0;
 }
+
 .email {
-   font-size: 14px;
-}
-.box {
-   border:2px solid #c44;
-   padding: 15px;
-   margin-top: 20px;
-   background: #e577e5;
-}
-.box h2{
-   color:aquamarine;
-}
-.image-box{
-   text-align: center;
-}
-.image-box img {
-   width: 200px;
-}
-table {
-   width: 100%;
-   border-collapse: collapse;
-}
-th, td {
-   border: 1px solid black;
-   padding: 8px;
-}
-.slide {
-   width: 150px;
-   height: 120px;
-   background-color: white;
-   border: 2px solid #aaa;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-.slideshow {
-    width: 300px;
-    height: 200px;
-    margn: auto;
-    position: relative;
-    overflow: hidden;
-    border: 2px splid #999;
-}
-.slideshow img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity 0;
-    animation: slideShow 9s infinite; 
-}
-.slideshow img:nth-child(1); {
-    anmation-delay: 0s;
-}
-.slideshow img:nth-child(2); {
-    animation-delay: 3s;
-}
-.slideshow img:nth-child(3); {
-    animation-delay: 6s;
-}
-@keyframes slideshow {
-   0% {opacity: 0; }
-   10% {opacity: 1; }
-   30% {opacity: 1; }
-   40% {opacity: 0; }
-   100% {opacity: 0; }
+  font-size: 14px;
 }
 
-    
+.box {
+  border: 2px solid #c44;
+  padding: 15px;
+  margin-top: 20px;
+  background: #e577e5;
+}
+
+.box h2{
+  color: aquamarine;
+  margin-top: 0;
+}
+
+.image-box{
+  text-align: center;
+}
+
+.image-box img {
+  width: 200px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+
+.carousel-shell{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.nav-btn{
+  background: transparent;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 8px 10px;
+  line-height: 1;
+  user-select: none;
+}
+
+.nav-btn:hover{ opacity: 0.85; }
+
+.carousel-viewport{
+  width: 680px;
+  overflow: hidden;
+}
+
+.carousel-track{
+  display: flex;
+  gap: 20px;
+}
+
+.card{
+  width: 200px;
+  height: 150px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 200ms ease;
+}
+
+.card.active img{
+  transform: scale(1.12);
+}
+
+
+
+.card.is-zooming img{
+  transform: scale(1.13);
+}
+
+.dots{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.55);
+}
+
+.dot.is-active{
+  background: #ffffff;
+}

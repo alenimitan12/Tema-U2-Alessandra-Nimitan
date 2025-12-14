@@ -1,102 +1,81 @@
+<!DOCTYPE html>
 <html lang="ro">
-   <head>
-       <meta charset="UTF-8">
-<title> structura retelei  personale </title>
-<link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8" />
+  <title>structura retelei personale</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <div class="page">
+    <header class="header">
+      <h1>NIMITAN ALESSANDRA</h1>
+      <span class="email">alessandra nimitan@yahoo.com</span>
+    </header>
 
+    <section class="box">
+      <h2>STRUCTURA RETELEI PERSONALE SI ACCESUL LA INTERNET</h2>
+      <div class="image-box">
+        <img src="retea-wireless.jpg" alt="Schema retea" />
+      </div>
+    </section>
 
-   <div class="page">
-       <header class="header">
-           <h1> NIMITAN ALESSANDRA</h1>
-           <span class="emil">alessandra nimitan@yahoo.com</span>
-       </header>
-       <section class="box">
-           <h2>STRUCTURA RETELEI PERSONALE SI ACCESUL LA INTERNET</h2>
-           <div class="image-box">
-           <img src="retea-wireless.jpg" alt="Schema retea">
-           </div>
-           </section>
+    <section class="box">
+      <h2>CARACTERISTICELE CONEXIUNII LA RETEA</h2>
+      <ul>
+        <li>E8-2A-44-34-C9-7E</li>
+        <li>192.168.0.106</li>
+        <li>22.07</li>
+        <li>28.28</li>
+      </ul>
+    </section>
 
+    <section class="box">
+      <h2>Specificatii tehnice ale statiei principale de lucru</h2>
+      <table>
+        <tr>
+          <th>Denumire componenta</th>
+          <th>Producator</th>
+          <th>parametri</th>
+        </tr>
+        <tr>
+          <td>Procesor</td>
+          <td>intel Core(TM)</td>
+          <td>i3-7100U</td>
+        </tr>
+        <tr>
+          <td>Memorie RAM</td>
+          <td>Corsair</td>
+          <td>4.00 GB</td>
+        </tr>
+      </table>
+    </section>
 
-        <section class="box">
-           <h2> CARACTERISTICELE CONEXIUNII LA RETEA</h2>
-           <ul>
-               <li>E8-2A-44-34-C9-7E</li>
-               <li>192.168.0.106</li>
-               <li>22.07</li>
-               <li>28.28</li>
-           </ul>
-           </section>
-           <section class="box">
-               <h2> Specificatii tehnice ale statiei principale de lucru</h2>
-               <table>
-                   <tr>
-                       <th>Denumire componenta</th>
-                       <th>Producator</th>
-                       <th>parametri</th>
-                   </tr>
-                   <tr>
-                       <td>Procesor</td>
-                       <td>intel Core(TM)</td>
-                       <td>i3-7100U</td>
-                   </tr>
-                   <tr>
-                       <td>Memorie RAM</td>
-                       <td>Corsair</td>
-                       <td>4.00 GB</td>
-                   </tr>
-               </table>
-           </section>
-          <section class="box">
-    <h2>Utilizarea resurselor</h2>
-    <input type="checkbox" id="toggleSlideshow" class="toggle">
-    <label for="toggleSlideshow" class="slideshow">
-        <img src="img1.png" alt="">
-        <img src="img2.png" alt="">
-        <img src="img3.png" alt="">
-    </label>
-</section>
+    <section class="box">
+      <h2>Utilizarea resurselor</h2>
 
-<style>
-.box {
-    width: 650px;
-    margin: auto;
-}
-.toggle {
-    display: none;
-}
-.slideshow {
-    display: flex;
-    gap: 10px;
-    cursor: pointer;
-}
+      <div class="carousel-shell">
+        <button class="nav-btn prev" type="button" aria-label="Anterior">&#10094;</button>
 
-.slideshow img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    opacity: 1;
-    transition: opacity 0.3s;
-}
-.toggle:checked + .slideshow img {
-    opacity: 0;
-    animation: slideShow 9s infinite;
-}
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <div class="card"><img src="img1.png" alt="Imagine 1" /></div>
+            <div class="card"><img src="img2.png" alt="Imagine 2" /></div>
+            <div class="card"><img src="img3.png" alt="Imagine 3" /></div>
+          </div>
+        </div>
 
-.toggle:checked + .slideshow img:nth-child(1) { animation-delay: 0s; }
-.toggle:checked + .slideshow img:nth-child(2) { animation-delay: 3s; }
-.toggle:checked + .slideshow img:nth-child(3) { animation-delay: 6s; }
+        <button class="nav-btn next" type="button" aria-label="Urmator">&#10095;</button>
+      </div>
 
-@keyframes slideShow {
-    0%, 11%, 100% { opacity: 0; }
-    11%, 33% { opacity: 1; }
-}
-</style>
-           </div>
-          
-       </body>
+      <div class="dots" aria-label="Indicator slideshow">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+  </div>
 
-
+  <script src="script.js"></script>
+</body>
 </html>
